@@ -1,0 +1,41 @@
+server:
+  port: 9999
+  servlet:
+    context-path: /sell
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: hadoop
+    url: jdbc:mysql://192.168.1.14/weixin_order?useUnicode=true&characterEncoding=utf-8&userSSL=false&serverTimezone=Asia/Shanghai
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  redis:
+    host: 192.168.1.14
+    port: 6379
+  jackson:
+    default-property-inclusion: non_null
+wechat:
+  mpAppId: wx119bca24a94b2948
+  mpAppSecret: 53d35087cf86597a83fda628c4f8d7ff
+  openAppId: wx6ad169e98ag80r62
+  openAppSecret: 91a2ff6d38a2bbccfb7e9f947958e7w
+  mchId: 1483469312
+  mchKey: C5245D70627C1F8E9964D494B0735025
+  keyPath: F:/cert/wechat/h5.p12
+  notifyUrl: http://weixin-sell.natapp1.cc/sell/pay/notify
+  templateId:
+    orderStatus: 2Az-NBs8saApcXu2gktoR9BXysjh2d85eyvyU5IRZ8s
+baseUrl:
+  wechatMpAuthorize: http://weixin-sell.natapp1.cc
+  wechatOpenAuthorize: http://weixin-sell.natapp1.cc
+  sell: http://weixin-sell.natapp1.cc
+logging:
+  level:
+    com:
+      longyx:
+        weixin:
+          sell:
+            repository: trace
