@@ -17,6 +17,8 @@ spring:
     port: 6379
   jackson:
     default-property-inclusion: non_null
+  profiles:
+    active: dev
 wechat:
   mpAppId: wx119bca24a94b2948
   mpAppSecret: 53d35087cf86597a83fda628c4f8d7ff
